@@ -69,7 +69,7 @@
           while($data2 = mysqli_fetch_assoc($result2)){
             array_push($bookId,$data2['issuebookid']);
           }
-          echo'<div class="p-4 lg:w-1/2">
+          echo'<div class="border-solid border-1 border-slate-400 p-4 lg:w-1/3">
           <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
             <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="../uploads/';
             if(isset($data['userimageurl'])){

@@ -58,7 +58,7 @@
                 </svg>
                 <div class="mt-4 flex text-sm leading-6 text-gray-600">
                   <label required for="file-upload" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-                    <input type="file" name="fileToUpload" id="">
+                    <input type="file" name="fileToUpload" id="" required>
                   </label>
                   <p class="pl-1">or drag and drop</p>
                 </div>
@@ -130,7 +130,7 @@
 		        $img_ex_lc = strtolower($img_ex);
                 $allowed_exs = array("jpg", "jpeg","png");
 
-                if (in_array($img_ex_lc, $allowed_exs) && isset($userid)) {
+                if (in_array($img_ex_lc, $allowed_exs) || isset($userid)) {
                     $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
                     $img_upload_path = '../uploads/'.$new_img_name;
                     move_uploaded_file($tmp_name, $img_upload_path);

@@ -14,7 +14,6 @@
         include '../extra/nav.php';
         include '../extra/conn.php';
     ?>
-
     <?php
         $resultforbooksize = mysqli_query($conn,"SELECT * FROM `bookdetails`;"); 
         $resultforissuebooksize = mysqli_query($conn,"SELECT * FROM `issuebook`;"); 
@@ -23,8 +22,6 @@
         $rowforissuebooksize = mysqli_num_rows($resultforissuebooksize);
         $rowforuseridsize = mysqli_num_rows($resultforuseridsize);
     ?>
-
-
 <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap -m-4 text-center">
@@ -77,10 +74,6 @@
           </div>
         </div>
       </section>
-
-
-
-
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-2 mx-auto">
             <div class="text-center mb-20">
@@ -144,7 +137,6 @@
           </div>
         </div>
       </section>
-
       <?php include '../extra/footer.php'; ?>
 </body>
 </html>

@@ -17,7 +17,6 @@
                 </svg>
                 <span class="ml-3 text-xl">Library Management System</span>
             </a>
-
         </div>
     </header>
     <section class="text-gray-600 body-font">

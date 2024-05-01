@@ -18,7 +18,6 @@
             <a href="manageLibraryID.php" class="mr-5 hover:text-gray-900">Manage Library ID</a>
             <a href="../extra/logout.php" class="mr-5 hover:text-gray-900">LogOut</a>
         </nav>
-
     </div>
 </header>';
 ?>

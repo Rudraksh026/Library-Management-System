@@ -155,6 +155,23 @@
         });
         </script>';
       }
+      $sqlcheckforlimit = "SELECT * from issuebook where issuerid = $userid ;";
+      $resultcheckforlimit = mysqli_query($conn,$sqlcheckforlimit);
+      $rowcheckforlimit = mysqli_num_rows($resultcheckforlimit);
+      if($rowcheckforlimit > 3)
+      {
+        $tempofphp = false;
+        $tempofphp2 = false;
+        echo '<script>
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "You already Borrowed 3 Books ! ",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        </script>';
+      }
       if($tempofphp){
         $sqlforinsert = "INSERT INTO `issuebook` (`issuedate`, `issuerid`, `issuebookid`, `sno`) VALUES ('".$date."', '".$userid."', '".$issuebookid."', NULL);";
         $resultforinsert = mysqli_query($conn,$sqlforinsert);

@@ -72,7 +72,10 @@
           echo'<div class="border-solid border-1 border-slate-400 p-4 lg:w-1/3">
           <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
             <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="../uploads/';
-            if(isset($data['userimageurl'])){
+            $img_ex = pathinfo($data['userimageurl'], PATHINFO_EXTENSION);
+		        $img_ex_lc = strtolower($img_ex);
+                $allowed_exs = array("jpg", "jpeg","png");
+            if(in_array($img_ex_lc, $allowed_exs)){
               echo $data['userimageurl'];
             }
             else{
